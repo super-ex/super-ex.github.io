@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SuperEx: Enhancing Indoor Mapping and Exploration using Non-Line-of-Sight Perception">
+  <meta name="keywords" content="SuperEx, D-Mapping, Exploration, Non-Line-of-Sight, NLOS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuperEx: Enhancing Indoor Mapping and Exploration using Non-Line-of-Sight Perception</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-16QXKHY6MD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-16QXKHY6MD');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SuperEx: Enhancing Indoor Mapping and Exploration using Non-Line-of-Sight Perception</h1>
+          
+          <!-- Authors Grid Layout -->
+          <div class="authors-grid">
+            <div class="columns is-centered is-variable is-8">
+              <div class="column is-narrow has-text-centered">
+                <div class="author-block-container">
+                  <div class="author-name is-size-5">
+                    <a>Kush Garg</a>
+                  </div>
+                  <div class="author-affiliation is-size-6">
+                    Delhi Technological University
+                  </div>
+                </div>
+              </div>
+              <div class="column is-narrow has-text-centered">
+                <div class="author-block-container">
+                  <div class="author-name is-size-5">
+                    <a href="https://akshatdave.github.io">Akshat Dave</a>
+                  </div>
+                  <div class="author-affiliation is-size-6">
+                    Stony Brook University
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="--to be added--"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="--to be added--"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/r53JzqJOlBI"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/introvid.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">SuperEx </span> is a framework that captures multiple light bounces without additional hardware allowing robots to see beyond line of sight, enhancing indoor mapping and exploration.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Efficient exploration and mapping in unknown indoor 
+            environments is a fundamental challenge, with high stakes in time-critical 
+            settings. In current systems, robot perception remains confined to line-of-sight; 
+            occluded regions remain unknown until physically traversed, leading to inefficient 
+            exploration when layouts deviate from prior assumptions.
+          </p>
+          <p>
+            In this work, we bring non-line-of-sight (NLOS) sensing to robotic exploration. 
+            We leverage single-photon LiDARs, which capture time-of-flight histograms that encode 
+            the presence of hidden objects -- allowing robots to look around blind corners. 
+            Recent single-photon LiDARs have become practical and portable, enabling deployment
+            beyond controlled lab settings. Prior NLOS works target 3D reconstruction in static, 
+            lab-based scenarios, 
+            and initial efforts toward NLOS-aided navigation consider simplified geometries.
+          </p>
+          <p>
+            
+            We introduce <span class="dnerf">SuperEx</span>, a framework that integrates 
+            NLOS sensing directly into the mapping–exploration loop. SuperEx augments global 
+            map prediction with beyond-line-of-sight cues by (i) carving empty NLOS regions from 
+            timing histograms and (ii) reconstructing occupied structure via a two-step 
+            physics-based and data-driven approach that leverages structural regularities. 
+            Evaluations on complex simulated maps and the real-world KTH Floorplan dataset show a 
+            12% gain in mapping accuracy under 30% coverage and improved exploration efficiency 
+            compared to line-of-sight baselines, 
+            opening a path to reliable mapping beyond direct visibility.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Principle of NLOS. -->
+        </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<!-- Principle of NLOS Section -->
+<section class="section section-dark" style="background-color: #f5f5f5 !important;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Principle of NLOS Sensing</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/nlosbasic_v2.png" 
+               alt="NLOS Principle Diagram"
+               style="width: 100%; max-width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0rem; cursor: pointer;"
+               onclick="window.open('./static/pdfs/nlosbasic_v2.pdf', '_blank')">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Single-photon LiDAR comprises a
+            pulsed laser, single-photon detector, and timing circuits. (a) When the laser
+            pulse strikes a visible wall, it diffuses, and some of the scattered rays hit
+            the hidden object. Some of the light is scattered back and captured by the
+            sensor as time-of-flight histograms (b), recording the number of photons in
+            each time bin. These measurements are then converted into back-projection
+            maps (c), which represent the likelihood of an object's presence at a certain
+            distance from the wall.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!--/ Principle of NLOS. -->
+
+
+<!-- Pipeline Section -->
+<section class="section section-light" style="background-color: #ffffff !important;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Pipeline</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/pipeline.png" 
+               alt="SuperEx Pipeline Flowchart"
+               style="width: 100%; max-width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer;"
+               onclick="window.open('./static/pdfs/pipeline flowchart_v2.pdf', '_blank')">
+          
+          <!-- Caption -->
+          <p class="pipeline-caption" style="font-size: 0.9rem; color: #666; margin-top: 0.5rem; margin-bottom: 1.5rem; line-height: 1.4;">
+            The histograms captured by the single-photon LiDAR enable 1) carving out NLOS regions that are empty and 2) backprojection
+of occupied NLOS, that is filtered with a Pix2Pix network. Both the carved occupancy and filtered backprojection are fed into the Lama network for
+improved global map prediction, and then for enhanced frontier exploration.
+          </p>
+          
+          <!-- Horizontal line -->
+          <hr style="border: none; height: 1px; background-color: #ddd; margin: 1.5rem 0;">
+        </div>
+        
+        <div class="content has-text-justified">
+          <p>
+            SuperEx provides a complete pipeline for simulating and integrating non-line-of-sight (NLOS) perception into robotic
+            mapping and exploration. The framework is divided into three modules:
+          </p>
+          <ul>
+            <li><strong>Simulation:</strong> We develop a physics-based simulator for SPAD-based LiDARs that models multi-bounce photon propagation. This generates transient histograms and corresponding backprojection images that capture indirect reflections in complex environments.</li>
+            
+            <li><strong>Map Reconstruction:</strong> We use a sequential pipeline comprising an image-to-image translation model, Pix2Pix, and an image inpainting model, LaMa, to reconstruct NLOS occupancy maps from backprojection images. The reconstructed maps are fused with global map predictions to extend coverage into occluded regions.</li>
+            
+            <li><strong>Mapping and Exploration:</strong> We evaluate NLOS-informed mapping within state-of-the-art exploration frameworks. In particular, we adopt the indoor exploration scenarios and configurations introduced in the MapEx benchmark, enabling a direct comparison and demonstrating the benefits of incorporating NLOS perception.</li>
+          </ul>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results Section -->
+<section class="section section-dark" style="background-color: #f5f5f5 !important;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        
+        <!-- Tab Navigation -->
+        <div class="tabs is-centered is-boxed">
+          <ul>
+            <li class="is-active" data-tab="simulation" onclick="switchTab('simulation', this)">
+              <a>
+                <span>Simulation</span>
+              </a>
+            </li>
+            <li data-tab="backprojection" onclick="switchTab('backprojection', this)">
+              <a>
+                <span>Backprojection Filtering</span>
+              </a>
+            </li>
+            <li data-tab="comparisons" onclick="switchTab('comparisons', this)">
+              <a>
+                <span>Comparison</span>
+              </a>
+            </li>
+            <li data-tab="obstruction" onclick="switchTab('obstruction', this)">
+              <a>
+                <span>Added Obstruction</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Simulation Tab -->
+          <div id="simulation-content" class="tab-pane is-active">
+            <div class="content has-text-centered">
+              <video controls autoplay muted loop width="60%" style="max-width: 800px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0rem;">
+                <source src="./static/videos/sim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                This simulation provides an overview of how the map is expanded through carving and actively updated as the robot explores new areas and navigates efficiently.
+
+              </p>
+            </div>
+          </div>
+
+          <!-- Backprojection Filtering Tab -->
+          <div id="backprojection-content" class="tab-pane" style="display: none;">
+            <div class="content has-text-centered">
+              <img src="./static/images/laplacian comparison.png" 
+                   alt="Backprojection Filtering Results"
+                   style="width: 100%; max-width: 800px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 1rem; cursor: pointer;"
+                   onclick="window.open('./static/pdfs/laplacian comparison.pdf', '_blank')">
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                Back-projection map filtering comparison between Laplacian
+filtering and our module. We compare our data-driven filtering
+approach of back-projection maps (termed Pix2Pix) with prior heuristic-
+based filtering used in NLOS imaging using Laplacian filtering. Evaluated
+over 400 samples, our Pix2Pix module achieved an average IoU of 0.146,
+outperforming Laplacian Filter with IoU 0.051.
+              </p>
+            </div>
+          </div>
+
+          <!-- Comparisons Tab -->
+          <div id="comparisons-content" class="tab-pane" style="display: none;">
+            <div class="content has-text-centered">
+              <img src="./static/images/qualitative map figure.png" 
+                   alt="Qualitative Mapping Comparisons"
+                   style="width: 100%; max-width: 1200px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0rem; cursor: pointer;"
+                   onclick="window.open('./static/pdfs/qualitative map figure.pdf', '_blank')">
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                NLOS vs LOS exploration progress over time: Our approach increases the observation area by seeing NLOS regions, resulting in more coverage
+and better map prediction. LOS exploration approach MapEx falsely predicts a wall in the global map due to the limited visibility at t=50. As a result,
+it chooses a suboptimal frontier, resulting in a longer path compared to our NLOS exploration approach.
+              </p>
+            </div>
+          </div>
+
+          <!-- Added Obstruction Tab -->
+          <div id="obstruction-content" class="tab-pane" style="display: none;">
+            <div class="content has-text-centered">
+              <img src="./static/images/nlosdeadend.png" 
+                   alt="NLOS Dead-end Detection"
+                   style="width: 100%; max-width: 800px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0rem; cursor: pointer;"
+                   onclick="window.open('./static/pdfs/nlosdeadend.pdf', '_blank')">
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                Filtered back-projection map during NLOS sensing improves
+global map prediction over LOS sensing. (a) As the robot is traversing,
+an additional obstruction is introduced. (b) With LOS sensing, global map
+prediction fails to reconstruct the additional obstacle, resulting in an open
+corridor for exploration. (c) With NLOS sensing, we obtain a filtered
+back-projection map that correctly reconstructs the additional obstacle. (d)
+Global map prediction for NLOS takes this filtered back-projection map and
+correctly predicts the dead end.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+      function switchTab(tabName, clickedElement) {
+        // Hide all tab content
+        document.querySelectorAll('.tab-pane').forEach(function(pane) {
+          pane.style.display = 'none';
+          pane.classList.remove('is-active');
+        });
+        
+        // Remove active class from all tabs
+        document.querySelectorAll('.tabs li').forEach(function(tab) {
+          tab.classList.remove('is-active');
+        });
+        
+        // Show selected tab content
+        var targetContent = document.getElementById(tabName + '-content');
+        if (targetContent) {
+          targetContent.style.display = 'block';
+          targetContent.classList.add('is-active');
+        }
+        
+        // Add active class to clicked tab
+        clickedElement.classList.add('is-active');
+      }
+    </script>
+
+<!-- Technical Video Section -->
+<section class="section section-light" style="background-color: #ffffff !important;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Technical Video</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/r53JzqJOlBI?si=FTnXwKkObdHwOUB3&rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{to be added}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from the Nerfies template, which is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            If you use the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website, please also link back to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a> in your footer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
