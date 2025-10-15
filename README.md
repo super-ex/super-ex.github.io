@@ -2,10 +2,11 @@
 
 This is the repo for the paper
 
-**[SuperEx: Enhancing Indoor Mapping and Exploration using Non-Line-of-Sight Perception](tobeadded)**  
+**[SuperEx: Enhancing Indoor Mapping and Exploration using Non-Line-of-Sight Perception](https://super-ex.github.io)**  
+
 [Kush Garg](https://www.linkedin.com/in/kushgarg22/)<sup>\*</sup>, [Akshat Dave](https://akshatdave.github.io/)
 
-[Paper](https://arxiv.org/pdf/2510.10506) | [Code](--tobeadded--) | [Video](--tobeadded--)
+[Paper](https://arxiv.org/pdf/2510.10506) | [Video](https://youtu.be/r53JzqJOlBI)
 
 ## Abstract
 
