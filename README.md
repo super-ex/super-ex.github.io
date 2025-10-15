@@ -23,5 +23,6 @@ Efficient exploration and mapping in unknown indoor environments is a fundamenta
       archivePrefix={arXiv},
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2510.10506}, 
+      note={Preprint, under review}
 }
 ```
